@@ -19,8 +19,8 @@ Sample data used across all stages:
 Open index.html in a browser. No build step, no server.
 
 ## AI usage
-Tool: ChatGPT / Gemini
-Details per stage: Used for generating CSS Grid/Flexbox layouts and styling guidelines in stage 1. See `ai-log/etapa-01.md`.
+Tool: Gemini
+Details per stage: No AI tools were used in this stage. See `ai-log/etapa-01.md`.
 
 ## Status
 [x] Stage 1: static mockup
@@ -28,12 +28,13 @@ Details per stage: Used for generating CSS Grid/Flexbox layouts and styling guid
 
 | ID | Requirement | Where (permalink) | How to check |
 | :--- | :--- | :--- | :--- |
-| S1-R1 | README: description, fields, sample data, how to run | README.md | read |
-| S1-R2 | AI usage section | README.md | read |
-| S1-R3 | AI log for stage 1 | ai-log/etapa-01.md | read |
-| S1-R4 | header, form (text + select), 3 cards with own data | index.html#L1-L50 | open the page |
-| S1-R5 | finished card looks different | style.css | look at the card |
-| S1-R6 | 2 columns on desktop, 1 under 700px | style.css | resize < 700px |
-| S1-R7 | visible focus, readable dark theme | style.css | Tab; dark mode |
-| S1-R8 | commit "Stage 1" pushed | link către commit | commit history |
+| S1-R1 | README: description, fields, sample data, how to run | https://github.com/Iulian1346N/PetCare/blob/main/README.md | read |
+| S1-R2 | AI usage section | No AI tools were used in this stage | read |
+| S1-R3 | AI log for stage 1 | https://github.com/Iulian1346N/PetCare/blob/main/ai_log/etapa-01.md | read |
+| S1-R4 | header, form (text + select), 3 cards with own data | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/index.html#L1-L60 | open the page |
+| S1-R5 | finished card looks different | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L147-L150 | look at the card |
+| S1-R6 | 2 columns on desktop, 1 under 700px | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L172-L176 | resize < 700px |
+| S1-R7 | visible focus, readable dark theme | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L166-L169 
+https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L179-L190| Tab; dark mode |
+| S1-R8 | commit "Stage 1" pushed | https://github.com/Iulian1346N/PetCare/commit/f769bc09921d0d42d13699a5cddc90e03eb94c64 | commit history |
 - Stage 2: data logic in JavaScript
