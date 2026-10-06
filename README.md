@@ -34,7 +34,6 @@ Details per stage: No AI tools were used in this stage. See `ai-log/etapa-01.md`
 | S1-R4 | header, form (text + select), 3 cards with own data | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/index.html#L1-L60 | open the page |
 | S1-R5 | finished card looks different | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L147-L150 | look at the card |
 | S1-R6 | 2 columns on desktop, 1 under 700px | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L172-L176 | resize < 700px |
-| S1-R7 | visible focus, readable dark theme | https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L166-L169 
-https://github.com/Iulian1346N/PetCare/blob/370b26ec79a9cd551869debfd8466dd078370597/style.css#L179-L190| Tab; dark mode |
+| S1-R7 | visible focus, readable dark theme |https://github.com/Iulian1346N/PetCare/blob/b092834584e7c10e942642a6b19132bd119e2d8c/style.css#L166-L190 | Tab; dark mode |
 | S1-R8 | commit "Stage 1" pushed | https://github.com/Iulian1346N/PetCare/commit/f769bc09921d0d42d13699a5cddc90e03eb94c64 | commit history |
 - Stage 2: data logic in JavaScript
