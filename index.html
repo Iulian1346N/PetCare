@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PetCare - Mockup</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>PetCare</h1>
+        <p>Sistem de gestiune pentru îngrijirea animalelor de companie.</p>
+        <p class="app-count">3 elemente, dintre care 2 active</p>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h2>Adaugă activitate</h2>
+            <form class="item-form">
+                <label>Titlu 
+                    <input type="text" name="titlu" placeholder="Ex: Vaccinare" />
+                </label>
+                <label>Categorie / Tip
+                    <select name="eticheta">
+                        <option value="veterinar">Veterinar</option>
+                        <option value="alimentatie">Alimentație</option>
+                        <option value="igiena">Igienă</option>
+                    </select>
+                </label>
+                <button type="submit">Adaugă</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Activitățile mele</h2>
+            <ul class="item-list">
+                <li class="item-card">
+                    <div>
+                        <h3>Vaccinare antirabică</h3>
+                        <span class="badge badge-veterinar">Veterinar</span>
+                    </div>
+                    <span class="status">Activ</span>
+                </li>
+                <li class="item-card done">
+                    <div>
+                        <h3>Cumpărare hrană</h3>
+                        <span class="badge badge-alimentatie">Alimentație</span>
+                    </div>
+                    <span class="status">Efectuat</span>
+                </li>
+                <li class="item-card">
+                    <div>
+                        <h3>Spălare și tuns blană</h3>
+                        <span class="badge badge-igiena">Igienă</span>
+                    </div>
+                    <span class="status">Activ</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        Proiect Tehnologii Web
+    </footer>
+</body>
+</html>
