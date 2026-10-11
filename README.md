@@ -24,6 +24,10 @@ Details per stage: No AI tools were used in this stage. See `ai-log/etapa-01.md`
 
 ## Status
 [x] Stage 1: static mockup
+[x] Stage 2: data logic in JavaScript
+- Stage 3: Vite and React project
+
+A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
 ## Verification table
 
 | ID | Requirement | Where (permalink) | How to check |

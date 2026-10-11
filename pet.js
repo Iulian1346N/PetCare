@@ -58,7 +58,7 @@ console.log("Active:", numaraActive(animale));
 console.log("Căutare 'hrana':", listeazaTitluri(cautaDupaTitlu(animale, "hrana")).join(", "));
 
 console.log("--- Adăugare ---");
-let listaNoua = adaugaActivitate(animale, "Control veterinar lunar", "veterinar");
+let listaNoua = adaugaActivitate(animale, "Control veterinar", "veterinar");
 console.log("Lista nouă:", listaNoua.length, "elemente");
 console.log("Originalul a rămas cu:", animale.length, "elemente");
 
