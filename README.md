@@ -54,3 +54,14 @@ Plain JavaScript, no DOM. `animale.js` holds the array and the functions that re
 
 ## Stage 2: data logic in JavaScript
 
+### Stage 2: Data Logic in JavaScript
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| S2-R1 | JS file linked, logs on page load | https://github.com/Iulian1346N/PetCare/blob/d985629e2acbffa1b4e274625cfe9dea95fe7ee9/index.html#L65 | open page, F12 |
+| S2-R2 | 3+ items with id, name, state, tag | https://github.com/Iulian1346N/PetCare/blob/d985629e2acbffa1b4e274625cfe9dea95fe7ee9/pet.js#L1-L7 | read |
+| S2-R3 | list, count, search, add, toggle, delete | https://github.com/Iulian1346N/PetCare/blob/d985629e2acbffa1b4e274625cfe9dea95fe7ee9/pet.js#L9-L54 | console output |
+| S2-R4 | add rejects empty name and invalid tag | https://github.com/Iulian1346N/PetCare/blob/d985629e2acbffa1b4e274625cfe9dea95fe7ee9/pet.js#L28-L36 | last 2 console lines |
+| S2-R5 | original array unchanged after add | https://github.com/Iulian1346N/PetCare/blob/d985629e2acbffa1b4e274625cfe9dea95fe7ee9/pet.js#L37-L45 | console line |
+| S2-R6 | README Stage 2 section + AI log | https://github.com/Iulian1346N/PetCare/commit/d985629e2acbffa1b4e274625cfe9dea95fe7ee9| read |
+| S2-R7 | commit "Stage 2" pushed | https://github.com/Iulian1346N/PetCare/commit/ba30c6322a2473de11fe28e3c6bbaa7c66281421| commit history |
+
