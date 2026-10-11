@@ -20,15 +20,25 @@ Open index.html in a browser. No build step, no server.
 
 ## AI usage
 Tool: Gemini
-Details per stage: No AI tools were used in this stage. See `ai-log/etapa-01.md`.
+Details per stage: 
+Stage 1:Assistance with building and structuring the HTML5 page, and designing CSS layouts (Grid/Flexbox) with a responsive dark theme. See `ai-log/etapa-01.md`.
+Stage 2:Assistance with writing immutable JavaScript array methods (`map`, `filter`, `reduce`, `find`) and organizing project documentation. See `ai-log/etapa-02.md`.
+
 
 ## Status
 [x] Stage 1: static mockup
 [x] Stage 2: data logic in JavaScript
 - Stage 3: Vite and React project
 
+## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
+
+## Stage 2: data logic in JavaScript
+Plain JavaScript, no DOM. `animale.js` holds the array and the functions that read and change it. Results are printed in the browser console (F12).
+
 ## Verification table
+
+## Stage 1: Static Mockup
 
 | ID | Requirement | Where (permalink) | How to check |
 | :--- | :--- | :--- | :--- |
@@ -41,3 +51,6 @@ A web application for pet care management (PetCare) — a semantic static interf
 | S1-R7 | visible focus, readable dark theme |https://github.com/Iulian1346N/PetCare/blob/b092834584e7c10e942642a6b19132bd119e2d8c/style.css#L166-L190 | Tab; dark mode |
 | S1-R8 | commit "Stage 1" pushed | https://github.com/Iulian1346N/PetCare/commit/f769bc09921d0d42d13699a5cddc90e03eb94c64 | commit history |
 - Stage 2: data logic in JavaScript
+
+## Stage 2: data logic in JavaScript
+
