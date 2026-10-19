@@ -23,6 +23,7 @@ Tool: Gemini
 Details per stage: 
 Stage 1:Assistance with building and structuring the HTML5 page, and designing CSS layouts (Grid/Flexbox) with a responsive dark theme. See `ai-log/etapa-01.md`.
 Stage 2:Assistance with writing immutable JavaScript array methods (`map`, `filter`, `reduce`, `find`) and organizing project documentation. See `ai-log/etapa-02.md`.
+Stage 3: Troubleshooting execution policy errors in PowerShell and resolving Vite/React module import issues (`export default`). See `ai-log/etapa-03.md`.
 
 
 ## Status
@@ -35,6 +36,15 @@ A web application for pet care management (PetCare) — a semantic static interf
 
 ## Stage 2: data logic in JavaScript
 Plain JavaScript, no DOM. `animale.js` holds the array and the functions that read and change it. Results are printed in the browser console (F12).
+
+## Stage 3: Vite and React project
+The app now lives in `frontend/`, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## How to run
+cd frontend
+npm install
+npm run dev
+Then open the address printed in the terminal (http://localhost:5173)
 
 ## Verification table
 
@@ -52,7 +62,6 @@ Plain JavaScript, no DOM. `animale.js` holds the array and the functions that re
 | S1-R8 | commit "Stage 1" pushed | https://github.com/Iulian1346N/PetCare/commit/f769bc09921d0d42d13699a5cddc90e03eb94c64 | commit history |
 - Stage 2: data logic in JavaScript
 
-## Stage 2: data logic in JavaScript
 
 ### Stage 2: Data Logic in JavaScript
 | ID | Requirement | Where (permalink) | How to check |
@@ -65,3 +74,12 @@ Plain JavaScript, no DOM. `animale.js` holds the array and the functions that re
 | S2-R6 | README Stage 2 section + AI log | https://github.com/Iulian1346N/PetCare/commit/d985629e2acbffa1b4e274625cfe9dea95fe7ee9| read |
 | S2-R7 | commit "Stage 2" pushed | https://github.com/Iulian1346N/PetCare/commit/ba30c6322a2473de11fe28e3c6bbaa7c66281421| commit history |
 
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| **S3-R1** | npm run dev starts without errors | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/package.json | `npm install, npm run dev` |
+| **S3-R2** | app name and counter computed from data | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/src/App.jsx#L7-L17 | `edit data, save` |
+| **S3-R3** | data from README, not from the example | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/src/App.jsx#L1-L6 | `compare with README` |
+| **S3-R4** | stage 1 styles reused | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/src/App.css | `look at the page` |
+| **S3-R5** | node_modules ignored, build passes | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/.gitignore | `npm run build` |
+| **S3-R6** | README Stage 3 section + AI log | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/ai_log/etapa-03.md, https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/README.md | `read` |
+| **S3-R7** | commit "Stage 3" pushed | https://github.com/Iulian1346N/PetCare/commit/5fd49184928a037c6c4ac4d617bb70335dd5675b| `commit history` |
