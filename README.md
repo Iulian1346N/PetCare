@@ -24,12 +24,15 @@ Details per stage:
 Stage 1:Assistance with building and structuring the HTML5 page, and designing CSS layouts (Grid/Flexbox) with a responsive dark theme. See `ai-log/etapa-01.md`.
 Stage 2:Assistance with writing immutable JavaScript array methods (`map`, `filter`, `reduce`, `find`) and organizing project documentation. See `ai-log/etapa-02.md`.
 Stage 3: Troubleshooting execution policy errors in PowerShell and resolving Vite/React module import issues (`export default`). See `ai-log/etapa-03.md`.
+tage 4: Implementing modular React components (TaskList and TaskCard), passing data via props, rendering lists with map and unique key attributes, and handling conditional rendering for empty lists. See `ai-log/etapa-04.md`.
 
 
 ## Status
 [x] Stage 1: static mockup
 [x] Stage 2: data logic in JavaScript
-- Stage 3: Vite and React project
+[x] Stage 3: Vite and React project
+[x] Stage 4: components rendered from data
+[ ] Stage 5: local state and events
 
 ## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
@@ -39,6 +42,9 @@ Plain JavaScript, no DOM. `animale.js` holds the array and the functions that re
 
 ## Stage 3: Vite and React project
 The app now lives in `frontend/`, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## Stage 4: components
+The list is rendered from the data, through two components:- `TaskList` receives the whole array and renders one card per item- `TaskCard` receives a single item through props and displays it
 
 ## How to run
 cd frontend
