@@ -108,3 +108,15 @@ Then open the address printed in the terminal (http://localhost:5173)
 | S4-R5 | state changes the card look | https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/frontend/src/components/PetsCard.jsx#L4-L11 | toggle a done flag |
 | S4-R6 | README Stage 4 section + AI log | https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/README.md, https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/ai_log/etapa-04.md| read |
 | S4-R7 | commit "Stage 4" pushed | https://github.com/Iulian1346N/PetCare/commit/b95f7ef0f79b5b8e716fe23d29aea20cbd419a65 | commit history |
+
+### Stage 5: local state and events
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| S5-R1 | list kept in useState, in App | https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L1-L9 | read |
+| S5-R2 | toggling changes state and card look | https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L19-L24, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/components/PetsCard.jsx#L5-L11 | click a checkbox |
+| S5-R3 | delete removes the item | https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L25-L28, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/components/PetsCard.jsx#L19-L25 | click Delete |
+| S5-R4 | header counter derived, not in state | https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L35-L36 | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice, assignment) | https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L19-L28 | read |
+| S5-R6 | light / dark toggle: state + data-theme on html |https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L29-L34, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.css#L5-L30 | click the button, both system themes |
+| S5-R7 | no console warnings; README + AI log |https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/README.md, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/ai_log/etapa-05.md | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | https://github.com/Iulian1346N/PetCare/commit/e7db187dc993d21b3e7db1ca9dbd224e212a5779 | commit history |
