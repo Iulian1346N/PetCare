@@ -25,6 +25,8 @@ Stage 1:Assistance with building and structuring the HTML5 page, and designing C
 Stage 2:Assistance with writing immutable JavaScript array methods (`map`, `filter`, `reduce`, `find`) and organizing project documentation. See `ai-log/etapa-02.md`.
 Stage 3: Troubleshooting execution policy errors in PowerShell and resolving Vite/React module import issues (`export default`). See `ai-log/etapa-03.md`.
 tage 4: Implementing modular React components (TaskList and TaskCard), passing data via props, rendering lists with map and unique key attributes, and handling conditional rendering for empty lists. See `ai-log/etapa-04.md`.
+## Stage 5: local state and events
+No AI tools were used in this stage. See `ai-log/etapa-05.md`.
 
 
 ## Status
@@ -32,7 +34,8 @@ tage 4: Implementing modular React components (TaskList and TaskCard), passing d
 [x] Stage 2: data logic in JavaScript
 [x] Stage 3: Vite and React project
 [x] Stage 4: components rendered from data
-[ ] Stage 5: local state and events
+[x] Stage 5: local state and events
+[ ] Stage 6: loading data from a mock API
 
 ## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
@@ -45,6 +48,9 @@ The app now lives in `frontend/`, built with Vite. The data from stage 2 moved i
 
 ### Stage 4: components rendered from data
 The list is rendered from the data, through two components:- `TaskList` receives the whole array and renders one card per item- `TaskCard` receives a single item through props and displays it
+
+## Stage 5: local state and events
+The list lives in React state. Checking and deleting work from the page,and the counters in the header follow automatically. A button in the header switches between light and dark mode. Changes are lost on refresh, which is what stage 6 and stage 10 fix.
 
 ## How to run
 cd frontend

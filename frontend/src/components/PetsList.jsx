@@ -1,4 +1,6 @@
-export default function PetsList({ animale }) {
+import PetsCard from "./PetsCard.jsx";
+
+export default function PetsList({ animale, onToggle, onDelete }) {
   if (!animale || animale.length === 0) {
     return <p className="empty">Nu există niciun animal în listă.</p>;
   }
@@ -6,19 +8,12 @@ export default function PetsList({ animale }) {
   return (
     <div className="pets-grid">
       {animale.map((item) => (
-        <div key={item.id} className={`pet-card ${item.gata ? 'done' : ''}`}>
-          <div className="card-body">
-            <span className={`badge badge-${item.eticheta}`}>
-              {item.eticheta}
-            </span>
-            <h3>{item.titlu}</h3>
-          </div>
-          <div className="card-footer">
-            <span className="status-indicator">
-              {item.gata ? "Gata" : "Activ"}
-            </span>
-          </div>
-        </div>
+        <PetsCard
+          key={item.id}
+          pet={item}
+          onToggle={onToggle}
+          onDelete={onDelete}
+        />
       ))}
     </div>
   );

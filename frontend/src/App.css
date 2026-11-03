@@ -2,18 +2,30 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-main: #231b15;
-    --sidebar-bg: #2d241d;
-    --content-bg: #c8b5a6;
-    --card-bg: #fffbf7;
-    --text-dark: #1a1410;
-    --text-light: #f5f2eb;
-    --text-muted: #4a3d34;
-    --accent: #a14207;
-    --accent-glow: rgba(161, 66, 7, 0.35);
-    --border: #b09c8c;
-    --radius: 20px;
+:root[data-theme="dark"] {
+  --bg-main: #14121d;       
+  --sidebar-bg: #1e1b2e;   
+  --content-bg: #1a1726;    
+  --card-bg: #262238;       
+  --text-dark: #f5f2eb;     
+  --text-light: #f5f2eb;
+  --text-muted: #9ca3af;
+  --border: #352f4d;
+  --accent: #f6ad55;
+  --card-hover: #2f2a45;
+}
+
+:root, :root[data-theme="light"] {
+  --bg-main: #231b15;      
+  --sidebar-bg: #2d241d;
+  --content-bg: #c8b5a6;
+  --card-bg: #fffbf7;
+  --text-dark: #1a1410;
+  --text-light: #f5f2eb;
+  --text-muted: #4a3d34;
+  --accent: #a14207;
+  --border: #b09c8c;
+  --card-hover: #ffffff;
 }
 
 body {
@@ -80,14 +92,14 @@ body {
 
 .sidebar-brand p {
     margin: 0;
-    color: #d1c2b6;
+    color: var(--text-muted);
     font-size: 0.95rem;
 }
 
 .stats-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius);
+    border-radius: 20px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -107,7 +119,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    color: #e2d7cc;
+    color: var(--text-light);
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -134,6 +146,7 @@ body {
     flex: 1;
     padding: 50px 60px;
     background: var(--content-bg);
+    color: var(--text-dark);
     height: 100%;
     overflow-y: auto;
     display: flex;
@@ -155,24 +168,23 @@ body {
     margin: 0;
     font-size: 2rem;
     font-weight: 800;
-    color: #16110e;
+    color: var(--text-dark);
     letter-spacing: -0.5px;
 }
 
 .badge-pill {
-    background: #f4ece4;
-    color: #592e15;
+    background: var(--card-bg);
+    color: var(--text-dark);
     padding: 8px 18px;
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 700;
-    border: 1px solid #9c8272;
+    border: 1px solid var(--border);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease;
 }
 
 .badge-pill:hover {
-    background: #ffffff;
     transform: scale(1.05);
 }
 
@@ -186,29 +198,28 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-left: 6px solid var(--accent);
-    border-radius: var(--radius);
+    border-radius: 20px;
     padding: 24px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 4px 12px rgba(35, 27, 21, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     position: relative;
     z-index: 5;
 }
 
 .pet-card:hover {
     transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 16px 35px -8px var(--accent-glow);
     border-color: var(--accent);
-    background: #ffffff;
+    background: var(--card-hover);
 }
 
 .card-body h3 {
     margin: 8px 0 0 0;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #16110e;
+    color: var(--text-dark);
     transition: color 0.2s ease;
 }
 
@@ -230,67 +241,3 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: transform 0.2s ease;
-}
-
-.badge:hover {
-    transform: scale(1.08);
-}
-
-.badge-veterinar { 
-    background: #f8d7da; 
-    color: #721c24; 
-    border: 1px solid #f5c2c7; 
-}
-
-.badge-alimentatie { 
-    background: #ffe8d6; 
-    color: #7a3200; 
-    border: 1px solid #ffd8bc; 
-}
-
-.badge-igiena { 
-    background: #d1ecf1; 
-    color: #0a414a; 
-    border: 1px solid #bee5eb; 
-}
-
-.pet-card.done {
-    opacity: 0.75;
-    background: #e2d3c7;
-    border-left-color: #5e4f44;
-}
-
-.pet-card.done:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    background: #ece0d6;
-}
-
-.pet-card.done .card-body h3 {
-    text-decoration: line-through;
-    color: #3b3028;
-}
-
-.status-indicator {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #3b3028;
-}
-
-@media (max-width: 900px) {
-    .dashboard-layout {
-        flex-direction: column;
-        width: 100vw;
-        height: auto;
-        border-radius: 0;
-    }
-    .app-sidebar {
-        width: 100%;
-        padding: 30px 24px;
-        height: auto;
-    }
-    .main-content {
-        padding: 30px 24px;
-        height: auto;
-    }
-}
