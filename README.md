@@ -43,7 +43,7 @@ Plain JavaScript, no DOM. `animale.js` holds the array and the functions that re
 ## Stage 3: Vite and React project
 The app now lives in `frontend/`, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
 
-## Stage 4: components
+### Stage 4: components rendered from data
 The list is rendered from the data, through two components:- `TaskList` receives the whole array and renders one card per item- `TaskCard` receives a single item through props and displays it
 
 ## How to run
@@ -80,6 +80,7 @@ Then open the address printed in the terminal (http://localhost:5173)
 | S2-R6 | README Stage 2 section + AI log | https://github.com/Iulian1346N/PetCare/commit/d985629e2acbffa1b4e274625cfe9dea95fe7ee9| read |
 | S2-R7 | commit "Stage 2" pushed | https://github.com/Iulian1346N/PetCare/commit/ba30c6322a2473de11fe28e3c6bbaa7c66281421| commit history |
 
+## Stage 3: Vite and React project
 | ID | Requirement | Where (permalink) | How to check |
 | :--- | :--- | :--- | :--- |
 | **S3-R1** | npm run dev starts without errors | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/package.json | `npm install, npm run dev` |
@@ -89,3 +90,15 @@ Then open the address printed in the terminal (http://localhost:5173)
 | **S3-R5** | node_modules ignored, build passes | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/frontend/.gitignore | `npm run build` |
 | **S3-R6** | README Stage 3 section + AI log | https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/ai_log/etapa-03.md, https://github.com/Iulian1346N/PetCare/blob/5fd49184928a037c6c4ac4d617bb70335dd5675b/README.md | `read` |
 | **S3-R7** | commit "Stage 3" pushed | https://github.com/Iulian1346N/PetCare/commit/5fd49184928a037c6c4ac4d617bb70335dd5675b| `commit history` |
+
+
+### Stage 4: components rendered from data
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| S4-R1 | 2+ components in src/components/ | https://github.com/Iulian1346N/PetCare/tree/b95f7ef0f79b5b8e716fe23d29aea20cbd419a65/frontend/src/components | open folder |
+| S4-R2 | card receives data through props | https://github.com/Iulian1346N/PetCare/blob/b95f7ef0f79b5b8e716fe23d29aea20cbd419a65/frontend/src/components/PetsCard.jsx#L1-L12 | read |
+| S4-R3 | map + key={id}, no console warnings | https://github.com/Iulian1346N/PetCare/blob/b95f7ef0f79b5b8e716fe23d29aea20cbd419a65/frontend/src/components/PetsList.jsx#L1-L15 | F12, Console |
+| S4-R4 | message for empty list | https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/frontend/src/components/PetsList.jsx#L2-L5| set array to `[]` |
+| S4-R5 | state changes the card look | https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/frontend/src/components/PetsCard.jsx#L4-L11 | toggle a done flag |
+| S4-R6 | README Stage 4 section + AI log | https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/README.md, https://github.com/Iulian1346N/PetCare/blob/324671dff53ed62c00341811688c18e54d2a3c52/ai_log/etapa-04.md| read |
+| S4-R7 | commit "Stage 4" pushed | https://github.com/Iulian1346N/PetCare/commit/b95f7ef0f79b5b8e716fe23d29aea20cbd419a65 | commit history |
