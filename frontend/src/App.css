@@ -13,6 +13,8 @@
   --border: #352f4d;
   --accent: #f6ad55;
   --card-hover: #2f2a45;
+  --error-bg: #3b1d2e;
+  --error-border: #6b2a4a;
 }
 
 :root, :root[data-theme="light"] {
@@ -26,6 +28,8 @@
   --accent: #a14207;
   --border: #b09c8c;
   --card-hover: #ffffff;
+  --error-bg: #fdf2f8;
+  --error-border: #fbcfe8;
 }
 
 body {
@@ -241,3 +245,19 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: transform 0.2s ease;
+}
+.info { 
+  color: var(--text-muted); 
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.error {
+  color: #991b1b;
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 15px 0;
+  font-weight: 500;
+}

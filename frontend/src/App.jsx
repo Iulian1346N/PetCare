@@ -1,20 +1,46 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 import PetsList from "./components/PetsList.jsx";
-
-const ANIMALE_INITIALE = [
-  { id: 1, titlu: "Programare veterinar", gata: false, eticheta: "veterinar" },
-  { id: 2, titlu: "Cumpărat hrană", gata: true, eticheta: "alimentatie" },
-  { id: 3, titlu: "Spălat blană", gata: false, eticheta: "igiena" },
-];
+import { fetchAnimale } from "./api.js";
 
 function temaInitiala() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 export default function App() {
-  const [animale, setAnimale] = useState(ANIMALE_INITIALE);
+  const [animale, setAnimale] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   
   const [tema, setTema] = useState(temaInitiala);
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function load() {
+      try {
+        setLoading(true);
+        const data = await fetchAnimale();
+        if (!ignore) {
+          setAnimale(data);
+          setError(null);
+        }
+      } catch (err) {
+        if (!ignore) {
+          setError(err.message);
+        }
+      } finally {
+        if (!ignore) {
+          setLoading(false);
+        }
+      }
+    }
+
+    load();
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
 
   function handleToggle(id) {
     setAnimale((prev) =>
@@ -72,11 +98,21 @@ export default function App() {
           <span className="badge-pill">Sistem activ</span>
         </header>
         
-        <PetsList 
-          animale={animale} 
-          onToggle={handleToggle} 
-          onDelete={handleDelete} 
-        />
+        {loading && <p className="info">Se încarcă lista...</p>}
+        
+        {error && (
+          <p className="error">
+            Nu am putut încărca datele: {error}. Rulează <code>npm run api</code>?
+          </p>
+        )}
+
+        {!loading && !error && (
+          <PetsList 
+            animale={animale} 
+            onToggle={handleToggle} 
+            onDelete={handleDelete} 
+          />
+        )}
       </main>
     </div>
   );

@@ -27,6 +27,8 @@ Stage 3: Troubleshooting execution policy errors in PowerShell and resolving Vit
 tage 4: Implementing modular React components (TaskList and TaskCard), passing data via props, rendering lists with map and unique key attributes, and handling conditional rendering for empty lists. See `ai-log/etapa-04.md`.
 ## Stage 5: local state and events
 No AI tools were used in this stage. See `ai-log/etapa-05.md`.
+## Stage 6:  data from a mock API
+Integrating mock API data via fetch and useEffect, handling loading and error states, and configuring json-server. See `ai-log/etapa-06.md`.
 
 
 ## Status
@@ -35,7 +37,8 @@ No AI tools were used in this stage. See `ai-log/etapa-05.md`.
 [x] Stage 3: Vite and React project
 [x] Stage 4: components rendered from data
 [x] Stage 5: local state and events
-[ ] Stage 6: loading data from a mock API
+[x] Stage 6: loading data from a mock API
+[ ] Stage 7: form and validation
 
 ## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
@@ -52,10 +55,15 @@ The list is rendered from the data, through two components:- `TaskList` receives
 ## Stage 5: local state and events
 The list lives in React state. Checking and deleting work from the page,and the counters in the header follow automatically. A button in the header switches between light and dark mode. Changes are lost on refresh, which is what stage 6 and stage 10 fix.
 
+## Stage 6: data from a mock API
+The list is served by json-server from `db.json`. The app fetches it on load
+and shows a loading state and an error state.
+
 ## How to run
 cd frontend
 npm install
-npm run dev
+npm run api   # terminal 1, http://localhost:3001
+npm run dev   # terminal 2, http://localhost:5173
 Then open the address printed in the terminal (http://localhost:5173)
 
 ## Verification table

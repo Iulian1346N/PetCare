@@ -1,0 +1,9 @@
+{
+  "animale": [
+    { "id": 1, "titlu": "Programare veterinar", "gata": false, "eticheta": "veterinar" },
+    { "id": 2, "titlu": "Cumpărat hrană", "gata": true, "eticheta": "alimentatie" },
+    { "id": 3, "titlu": "Spălat blană", "gata": false, "eticheta": "igiena" },
+    { "id": 4, "titlu": "Schimbat de litieră", "gata": false, "eticheta": "igiena" },
+    { "id": 5, "titlu": "Verificare bol de mâncare", "gata": true, "eticheta": "alimentatie" }
+  ]
+}

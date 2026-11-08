@@ -2,7 +2,7 @@ import PetsCard from "./PetsCard.jsx";
 
 export default function PetsList({ animale, onToggle, onDelete }) {
   if (!animale || animale.length === 0) {
-    return <p className="empty">Nu există niciun animal în listă.</p>;
+    return <p className="empty">Nu există nicio activitate în listă.</p>;
   }
 
   return (
