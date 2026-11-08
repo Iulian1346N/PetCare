@@ -128,3 +128,16 @@ Then open the address printed in the terminal (http://localhost:5173)
 | S5-R6 | light / dark toggle: state + data-theme on html |https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.jsx#L29-L34, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/frontend/src/App.css#L5-L30 | click the button, both system themes |
 | S5-R7 | no console warnings; README + AI log |https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/README.md, https://github.com/Iulian1346N/PetCare/blob/e7db187dc993d21b3e7db1ca9dbd224e212a5779/ai_log/etapa-05.md | F12, Console |
 | S5-R8 | commit "Stage 5" pushed | https://github.com/Iulian1346N/PetCare/commit/e7db187dc993d21b3e7db1ca9dbd224e212a5779 | commit history |
+
+
+## Stage 6: loading data from a mock API
+
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| **S6-R1** | `npm run api` starts, route shows JSON | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/package.json#L11, https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/db.json#L1-L9 | open `localhost:3001/animale` |
+| **S6-R2** | data no longer in React code | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/src/App.jsx#L10 | read |
+| **S6-R3** | loading message while waiting | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/src/App.jsx#L101 | `--delay 4000` |
+| **S6-R4** | error message when API is down | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/src/App.jsx#L103-L107 | stop `npm run api`, refresh |
+| **S6-R5** | fetch only in `api.js`, URL from env | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/src/api.js#L1-L9, https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/.env.example#L1-L2 | search for `fetch`|
+| **S6-R6** | README Stage 6 section + AI log | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/README.md, https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/ai_log/etapa-06.md| read |
+| **S6-R7** | commit "Stage 6" pushed | https://github.com/Iulian1346N/PetCare/commit/e6fc6a741c0552445244fa822c1376468c6ae4ba | commit history |
