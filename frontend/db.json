@@ -35,6 +35,12 @@
       "eticheta": "igiena",
       "gata": true,
       "id": 6
+    },
+    {
+      "titlu": "spalre catel",
+      "eticheta": "igiena",
+      "gata": false,
+      "id": 7
     }
   ]
 }
