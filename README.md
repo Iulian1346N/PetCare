@@ -158,6 +158,6 @@ Then open the address printed in the terminal (http://localhost:5173)
 | S7-R3 | added item shows in the list and survives refresh |https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/App.jsx#L38-L41, https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/api.js#L25-L30 | add, refresh |
 | S7-R4 | toggle and delete survive refresh | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/App.jsx#L43-L60 | toggle/delete, refresh |
 | S7-R5 | button disabled while sending, form cleared only on success | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/components/PetsForm.jsx#L45-L58 | -delay 3000; stop API and submit |
-| S7-R6 | tw.json and the data-testid attributes from table 7.3 | tw.json, PetsCard.jsx#L..-L.. | querySelectorAll in the console|
-| S7-R7 | README Stage 7 section + AI log | README.md, ai-log/etapa-07.md | read[cite: 6] |
-| S7-R8 | commit “Stage 7” pushed | link to the commit | commit history[cite: 6] |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/tw.json, https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/frontend/src/components/PetsCard.jsx#L12-L33 | querySelectorAll in the console|
+| S7-R7 | README Stage 7 section + AI log | https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/README.md,  | read |
+| S7-R8 | commit “Stage 7” pushed | link to the commit | commit history |
