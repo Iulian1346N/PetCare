@@ -29,6 +29,8 @@ tage 4: Implementing modular React components (TaskList and TaskCard), passing d
 No AI tools were used in this stage. See `ai-log/etapa-05.md`.
 ## Stage 6:  data from a mock API
 Integrating mock API data via fetch and useEffect, handling loading and error states, and configuring json-server. See `ai-log/etapa-06.md`.
+## Stage 7: form and validation
+No AI tools were used in this stage. See `ai-log/etapa-07.md`.
 
 
 ## Status
@@ -38,7 +40,8 @@ Integrating mock API data via fetch and useEffect, handling loading and error st
 [x] Stage 4: components rendered from data
 [x] Stage 5: local state and events
 [x] Stage 6: loading data from a mock API
-[ ] Stage 7: form and validation
+[x] Stage 7: form and validation
+[ ] Stage 8: routing and detail page
 
 ## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
@@ -58,6 +61,11 @@ The list lives in React state. Checking and deleting work from the page,and the 
 ## Stage 6: data from a mock API
 The list is served by json-server from `db.json`. The app fetches it on load
 and shows a loading state and an error state.
+
+## Stage 7: form and validation
+Tasks can be added from the page. The form is controlled and validated,
+and every change (add, toggle, delete) goes to the API before it shows up
+in the list.
 
 ## How to run
 cd frontend
@@ -141,3 +149,15 @@ Then open the address printed in the terminal (http://localhost:5173)
 | **S6-R5** | fetch only in `api.js`, URL from env | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/src/api.js#L1-L9, https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/frontend/.env.example#L1-L2 | search for `fetch`|
 | **S6-R6** | README Stage 6 section + AI log | https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/README.md, https://github.com/Iulian1346N/PetCare/blob/e6fc6a741c0552445244fa822c1376468c6ae4ba/ai_log/etapa-06.md| read |
 | **S6-R7** | commit "Stage 6" pushed | https://github.com/Iulian1346N/PetCare/commit/e6fc6a741c0552445244fa822c1376468c6ae4ba | commit history |
+
+## Stage 7: form and validation
+| ID | Requirement | Where (permalink) | How to check |
+| :--- | :--- | :--- | :--- |
+| S7-R1 | controlled form: value + onChange on every field | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/components/PetsForm.jsx#L49-L57 | read |
+| S7-R2 | empty title shows an error, nothing is sent | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/components/PetsForm.jsx#L20 | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh |https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/App.jsx#L38-L41, https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/api.js#L25-L30 | add, refresh |
+| S7-R4 | toggle and delete survive refresh | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/App.jsx#L43-L60 | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | https://github.com/Iulian1346N/PetCare/blob/8834ab44670a87f2e4d5071b85a037ad41d9389e/frontend/src/components/PetsForm.jsx#L45-L58 | -delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | tw.json, PetsCard.jsx#L..-L.. | querySelectorAll in the console|
+| S7-R7 | README Stage 7 section + AI log | README.md, ai-log/etapa-07.md | read[cite: 6] |
+| S7-R8 | commit “Stage 7” pushed | link to the commit | commit history[cite: 6] |
