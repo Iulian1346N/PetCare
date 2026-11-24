@@ -1,0 +1,107 @@
+.page {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  margin: 0;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--text-dark);
+  background: var(--content-bg);
+  border-radius: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: none;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.header h1:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.themeBtn {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+}
+
+.themeBtn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.themeBtn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+}
+
+.description:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 28px 20px;
+    min-height: calc(100vh - 56px);
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+}

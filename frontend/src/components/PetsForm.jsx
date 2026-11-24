@@ -1,61 +1,79 @@
 import { useState } from "react";
-
-const ETICHETE = [
-  { value: "veterinar", label: "Veterinar" },
-  { value: "alimentatie", label: "Alimentație" },
-  { value: "igiena", label: "Igienă" },
-  { value: "sanatate", label: "Sănătate" },
-];
+import { ETICHETE } from "../constants.js";
+import styles from "./PetsForm.module.css";
 
 const TITLU_MAX = 100;
 
 export default function PetsForm({ onAdd }) {
   const [titlu, setTitlu] = useState("");
-  const [eticheta, setEticheta] = useState("igiena");
-  const [eroare, setEroare] = useState("");
-  const [trimite, setTrimite] = useState(false);
+  const [eticheta, setEticheta] = useState(ETICHETE[0]?.value ?? "veterinar");
+  const [detalii, setDetalii] = useState("");
+  const [error, setError] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  function valideaza() {
-    const t = titlu.trim();
-    if (t === "") return "Titlul este obligatoriu.";
-    if (t.length > TITLU_MAX) return `Titlul are maximum ${TITLU_MAX} de caractere.`;
+  function validate() {
+    const curat = titlu.trim();
+    if (!curat) {
+      return "Titlul este obligatoriu.";
+    }
+    if (curat.length > TITLU_MAX) {
+      return `Titlul are maximum ${TITLU_MAX} de caractere.`;
+    }
     return "";
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const mesaj = valideaza();
+    const mesaj = validate();
     if (mesaj) {
-      setEroare(mesaj);
+      setError(mesaj);
       return;
     }
-    setEroare("");
-    setTrimite(true);
+
+    setError(null);
+    setSubmitting(true);
     try {
-      await onAdd({ titlu: titlu.trim(), eticheta, gata: false });
+      const detaliiCurate = detalii.trim();
+      const payload = {
+        titlu: titlu.trim(),
+        eticheta,
+        gata: false,
+      };
+      if (detaliiCurate) {
+        payload.detalii = detaliiCurate;
+      }
+
+      await onAdd(payload);
       setTitlu("");
-      setEticheta("igiena");
+      setEticheta(ETICHETE[0]?.value ?? "veterinar");
+      setDetalii("");
     } catch (err) {
-      setEroare(err.message);
+      setError(err.message || "Eroare la salvare.");
     } finally {
-      setTrimite(false);
+      setSubmitting(false);
     }
   }
 
   return (
-    <form className="task-form" onSubmit={handleSubmit} noValidate data-testid="form">
+    <form
+      className={styles.form}
+      onSubmit={handleSubmit}
+      noValidate
+      data-testid="form"
+    >
       <label>
         Titlu
         <input
           type="text"
           value={titlu}
           onChange={(e) => setTitlu(e.target.value)}
-          placeholder="Ex: Programare cabinet"
+          placeholder="Ex: Control veterinar Luna"
           maxLength={TITLU_MAX}
-          aria-invalid={Boolean(eroare)}
+          aria-invalid={Boolean(error)}
           data-testid="form-title"
         />
       </label>
+
       <label>
         Etichetă
         <select
@@ -63,20 +81,38 @@ export default function PetsForm({ onAdd }) {
           onChange={(e) => setEticheta(e.target.value)}
           data-testid="form-eticheta"
         >
-          {ETICHETE.map((e) => (
-            <option key={e.value} value={e.value}>
-              {e.label}
+          {ETICHETE.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
             </option>
           ))}
         </select>
       </label>
-      {eroare && (
+
+      <label>
+        Detalii (opțional)
+        <textarea
+          rows={3}
+          value={detalii}
+          onChange={(e) => setDetalii(e.target.value)}
+          placeholder="Ex: Analize de sânge sau observații..."
+          data-testid="form-detalii"
+        />
+      </label>
+
+      {error && (
         <p className="error" data-testid="form-error">
-          {eroare}
+          {error}
         </p>
       )}
-      <button type="submit" disabled={trimite} data-testid="form-submit">
-        {trimite ? "Se salvează..." : "Adaugă"}
+
+      <button
+        type="submit"
+        className="btn"
+        disabled={submitting}
+        data-testid="form-submit"
+      >
+        {submitting ? "Se salvează..." : "Adaugă"}
       </button>
     </form>
   );

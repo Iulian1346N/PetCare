@@ -3,24 +3,20 @@
     {
       "id": 1,
       "titlu": "Programare veterinar",
-      "gata": false,
-      "eticheta": "veterinar"
+      "gata": true,
+      "eticheta": "veterinar",
+      "detalii": "Control periodic, vaccinare anuală și deparazitare la cabinet."
     },
     {
       "id": 2,
       "titlu": "Cumpărat hrană",
-      "gata": true,
-      "eticheta": "alimentatie"
+      "gata": false,
+      "eticheta": "alimentatie",
+      "detalii": "Sac de hrană uscată hipoalergenică și recompense dresaj."
     },
     {
       "id": 3,
       "titlu": "Spălat blană",
-      "gata": false,
-      "eticheta": "igiena"
-    },
-    {
-      "id": 4,
-      "titlu": "Schimbat de litieră",
       "gata": false,
       "eticheta": "igiena"
     },
@@ -31,16 +27,30 @@
       "eticheta": "alimentatie"
     },
     {
-      "titlu": "spalare Pudel",
-      "eticheta": "igiena",
-      "gata": true,
-      "id": 6
+      "id": 6,
+      "titlu": "Spalat pudel",
+      "gata": false,
+      "eticheta": "igiena"
     },
     {
-      "titlu": "spalre catel",
+      "titlu": "Reparare roata hamster",
       "eticheta": "igiena",
       "gata": false,
+      "detalii": "Cumparat necesare reparatie roata pentru hamster(suruburi, cadru fix, etc.) si reparare a acesteia",
       "id": 7
+    },
+    {
+      "titlu": "taiat unghii pudel",
+      "eticheta": "igiena",
+      "gata": false,
+      "id": 8
+    },
+    {
+      "titlu": "Schimbat litiera azi",
+      "eticheta": "veterinar",
+      "gata": true,
+      "detalii": "Actiune zilnica",
+      "id": 9
     }
   ]
 }

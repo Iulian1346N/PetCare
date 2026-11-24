@@ -15,8 +15,6 @@ Sample data used across all stages:
 2. Cumpărare hrană , done, Alimentatie
 3. Spălare și tuns blană, active, Igiena
 
-## How to run
-Open index.html in a browser. No build step, no server.
 
 ## AI usage
 Tool: Gemini
@@ -31,6 +29,8 @@ No AI tools were used in this stage. See `ai-log/etapa-05.md`.
 Integrating mock API data via fetch and useEffect, handling loading and error states, and configuring json-server. See `ai-log/etapa-06.md`.
 ## Stage 7: form and validation
 No AI tools were used in this stage. See `ai-log/etapa-07.md`.
+## Stage 8: routing and detail page
+Configuring React Router navigation, structuring detail and 404 routes, scoping styles with CSS Modules, and syncing theme switching across pages. See `ai-log/etapa-08.md`.
 
 
 ## Status
@@ -41,7 +41,9 @@ No AI tools were used in this stage. See `ai-log/etapa-07.md`.
 [x] Stage 5: local state and events
 [x] Stage 6: loading data from a mock API
 [x] Stage 7: form and validation
-[ ] Stage 8: routing and detail page
+[x] Stage 8: routing and detail page
+[ ] Stage 9: own backend with Express
+
 
 ## Stage 1: static mockup
 A web application for pet care management (PetCare) — a semantic static interface built with HTML5 and CSS3 (Grid, Flexbox, responsive design, and dark theme).
@@ -59,19 +61,19 @@ The list is rendered from the data, through two components:- `TaskList` receives
 The list lives in React state. Checking and deleting work from the page,and the counters in the header follow automatically. A button in the header switches between light and dark mode. Changes are lost on refresh, which is what stage 6 and stage 10 fix.
 
 ## Stage 6: data from a mock API
-The list is served by json-server from `db.json`. The app fetches it on load
-and shows a loading state and an error state.
+The list is served by json-server from `db.json`. The app fetches it on load and shows a loading state and an error state.
 
 ## Stage 7: form and validation
-Tasks can be added from the page. The form is controlled and validated,
-and every change (add, toggle, delete) goes to the API before it shows up
-in the list.
+Tasks can be added from the page. The form is controlled and validated, and every change (add, toggle, delete) goes to the API before it shows up in the list.
+
+## Stage 8: routing and detail page
+Three pages behind React Router: the list, a detail page at `/tasks/:id`, and an about page, plus a 404 page. Component styles moved to CSS Modules.
 
 ## How to run
 cd frontend
 npm install
-npm run api   # terminal 1, http://localhost:3001
-npm run dev   # terminal 2, http://localhost:5173
+npm run api   
+npm run dev   
 Then open the address printed in the terminal (http://localhost:5173)
 
 ## Verification table
@@ -161,3 +163,6 @@ Then open the address printed in the terminal (http://localhost:5173)
 | S7-R6 | tw.json and the data-testid attributes from table 7.3 | https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/tw.json, https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/frontend/src/components/PetsCard.jsx#L12-L33 | querySelectorAll in the console|
 | S7-R7 | README Stage 7 section + AI log | https://github.com/Iulian1346N/PetCare/blob/86afe45e34dfc2b06566618e3b6c30ba681e4508/README.md, https://github.com/Iulian1346N/PetCare/blob/c50c9e2cacec64679f4d54e2e3c7fc6969fe6b0d/ai_log/etapa-07.md | read |
 | S7-R8 | commit “Stage 7” pushed | https://github.com/Iulian1346N/PetCare/commit/8834ab44670a87f2e4d5071b85a037ad41d9389e | commit history |
+
+
+## Stage 8: routing and detail page
